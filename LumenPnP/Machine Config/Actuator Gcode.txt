@@ -1,0 +1,89 @@
+=======
+Default
+=======
+
+COMMAND_CONFIRM_REGEX
+^ok.*
+
+POSITION_REPORT_REGEX
+^.*X:(?<X>-?\d+\.\d+)\s*Y:(?<Y>-?\d+\.\d+)\s*Z:(?<Z>-?\d+\.\d+)\s*A:(?<A>-?\d+\.\d+)\s*B:(?<B>-?\d+\.\d+).*
+
+CONNECT_COMMAND
+G21 ; Set millimeters mode
+G90 ; Set absolute positioning mode
+M260 A112 B1 S1 ; Select VAC1 through mux
+M260 A109 B48 ; Select CMD register on VAC1 @address 109
+M260 B27 S1 ; Send byte to select 62.5 sleep time, SCO, sleep mode conversion (0001 1 011)
+M260 A112 B2 S1 ; Select VAC2 through mux
+M260 A109 B48 ; Select CMD register on VAC2 @address 109
+M260 B27 S1 ; Send byte to select 62.5 sleep time, SCO, sleep mode conversion (0001 1 011)
+
+HOME_COMMAND
+{Acceleration:M204 S%.2f ; Initialize acceleration}
+G28 ; Home all axes
+
+SET_GLOBAL_OFFSETS_COMMAND
+G92 {X:X%.4f} {Y:Y%.4f} {Z:Z%.4f} {A:A%.4f} {B:B%.4f} ; reset coordinates
+
+GET_POSITION_COMMAND
+M114 ; get position
+
+MOVE_TO_COMMAND
+{Acceleration:M204 S%.0f }
+G1 {X:X%.4f} {Y:Y%.4f} {Z:Z%.4f} {A:A%.4f} {B:B%.4f} {FeedRate:F%.0f} ; move to target
+
+MOVE_TO_COMPLETE_COMMAND
+M400 ; Wait for moves to complete before returning
+
+
+=======
+H1 VAC1
+=======
+
+ACTUATE_BOOLEAN_COMMAND
+{True:M106 P0}{False:M107 P0} ; Actuate pump
+{True:M106 P1}{False:M107 P1} ; Actuate solenoid
+
+ACTUATOR_READ_COMMAND
+M260 A112 B1 S1 ; Select VAC1 through multiplexer @address 112
+M260 A109 B6 S1 ; Select MSB register on VAC1 @address 109
+M261 A109 B1 S2 ; Request one byte back via decimal
+
+ACTUATOR_READ_REGEX
+^.*data:(?<Value>.*)
+
+
+=======
+H1 VAC2
+=======
+
+ACTUATE_BOOLEAN_COMMAND
+{True:M106 P2}{False:M107 P2} ; Actuate pump
+{True:M106 P3}{False:M107 P3} ; Actuate solenoid
+
+ACTUATOR_READ_COMMAND
+M260 A112 B2 S1 ; Select VAC2 through multiplexer @address 112
+M260 A109 B6 S1 ; Selects MSB register on VAC2 @address 109
+M261 A109 B1 S2 ; Request one byte back via decimal
+
+ACTUATOR_READ_REGEX
+^.*data:(?<Value>.*)
+
+
+===
+LED
+===
+
+ACTUATE_BOOLEAN_COMMAND
+{True:M150 P255 R255 U255 B255}{False:M150 P0}
+
+
+================
+PhotonFeederData
+================
+
+ACTUATOR_READ_COMMAND
+M485 {Value}
+
+ACTUATOR_READ_REGEX
+rs485-reply: (?<Value>.*)

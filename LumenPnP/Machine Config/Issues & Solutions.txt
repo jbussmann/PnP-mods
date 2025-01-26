@@ -1,0 +1,83 @@
+Description: Use demo simulation machine and choose nozzle configuration
+
+Executed tasks:
+accepted: create nozzles for this head
+manually: remove feeders, parts and packages from simulation machine except fiducials
+manually: remove existing nozzle tips (so they are assigned uniform IDs)
+manually: create CP40 nozzle tip set (use prefix NT for nozzle tip)
+-----------------
+Milestone Welcome
+=================
+
+Description: Connect to controllers and cameras
+
+Executed tasks:
+manually: remove bottom cam and create new up-looking cam (get rid of some preconfigs)
+manually: remove topcam and create new down-looking cam (get rid of some preconfigs)
+manually: select real USB cameras from the respective dropdowns
+accepted: replace Gcode driver with real driver
+manually: select Gcode driver comms type and serial port
+accepted: detect firmware
+accepted: change serial flow control
+-----------------
+Milestone Connect
+=================
+
+Description: configure machine axes, motion, vacuum and light switching
+
+Executed tasks:
+accepted: 5x axis letter missing
+accepted: 4x top camera axis assignment missing
+accepted: 2x enable switch linear/rotational
+manually: rearrange and rename axes (small letters, C1->a, C2->b ect.)
+manually: remove all machine actuators and create LED and PhotonFeeder actuators
+manually: configure LED actuator on both cameras
+manually: remove all head actuators and create VAC1 and VAC2 actuators
+manually: configure vacuum and sensing actuators on both nozzles
+manually: restart OpenPnP for I&S to pick up the new configuration
+manually: configure all gcode according to gcode file
+dismissed: H1 is missing pump actuator
+----------------
+Milestone Basics
+================
+
+Description: Define save z, soft limits, motion control model, feed-rates, accelerations etc.
+
+Executed tasks:
+accepted: home machine
+manually: configure z1 homing coordinate and z2 mapping points
+accepted: 2x enable dynamic safe z
+accepted: 2x set safe z
+dismissed: 2x unconventional z axis (cannot be dismissed: potential bug)
+manually: set and enable soft limits for x and y
+manually: set and enable soft limits for z1 (very important for all positive z axis!)
+manually: set nozzle tip change location for both nozzles
+manually: set individual feed rate and acceleration by axes
+accepted: 2x align nozzle rotation with part
+accepted: 2x enable wrap around
+accepted: enable ModeratedConstantAcceleration
+accepted: remove diver maximum feed rate
+--------------------
+Milestone Kinematics
+====================
+
+setup camera and computer vision
+----------------
+Milestone Vision
+================
+
+calibrate precise motion and vision
+---------------------
+Milestone Calibration
+=====================
+
+configure feeders
+solve other production related issues
+--------------------
+Milestone Production
+====================
+
+advanced features for faster and more automatic machine
+------------------
+Milestone Advanced
+==================
