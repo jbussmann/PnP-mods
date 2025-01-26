@@ -1,0 +1,77 @@
+<gcode-driver id="DRV181da1c40d579682" name="GcodeDriver" motion-control-type="ModeratedConstantAcceleration" communications="serial" connection-keep-alive="false" sync-initial-location="false" allow-unhomed-motion="false" units="Millimeters" max-feed-rate="0" backlash-offset-x="-1.0" backlash-offset-y="-1.0" backlash-offset-z="0.0" backlash-offset-r="0.0" non-squareness-factor="0.0" backlash-feed-rate-factor="0.1" timeout-milliseconds="20000" connect-wait-time-milliseconds="3000" dollar-wait-time-milliseconds="50" visual-homing-enabled="true" backslash-escaped-characters-enabled="false" remove-comments="false" compress-gcode="false" compression-excludes="[]&quot;" logging-gcode="false" supporting-pre-move="false" using-letter-variables="true" infinity-timeout-milliseconds="60000">
+   <serial line-ending-type="LF" port-name="ttyACM0" baud="115200" flow-control="RtsCts" data-bits="Eight" stop-bits="One" parity="None" set-dtr="false" set-rts="false" name="SerialPortCommunications"/>
+   <tcp line-ending-type="LF" ip-address="GcodeServer" port="23" name="TcpCommunications"/>
+   <simulated line-ending-type="LF"/>
+   <homing-fiducial-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+   <detected-firmware><![CDATA[FIRMWARE_NAME:Marlin bugfix-2.1.x (Sep 19 2024 13:39:21) SOURCE_CODE_URL:github.com/MarlinFirmware/Marlin PROTOCOL_VERSION:1.0 MACHINE_TYPE:LumenPnP EXTRUDER_COUNT:0 AXIS_COUNT:5]]></detected-firmware>
+   <reported-axes><![CDATA[X:0.00 Y:0.00 Z:31.50 A:0.00 B:0.00 Count X:0 Y:0 Z:1260 A:0 B:3197]]></reported-axes>
+   <command type="COMMAND_CONFIRM_REGEX">
+      <text><![CDATA[^ok.*]]></text>
+   </command>
+   <command type="POSITION_REPORT_REGEX">
+      <text><![CDATA[^.*X:(?<X>-?\d+\.\d+)\s*Y:(?<Y>-?\d+\.\d+)\s*Z:(?<Z>-?\d+\.\d+)\s*A:(?<A>-?\d+\.\d+)\s*B:(?<B>-?\d+\.\d+).*]]></text>
+   </command>
+   <command type="CONNECT_COMMAND">
+      <text><![CDATA[G21 ; Set millimeters mode]]></text>
+      <text><![CDATA[G90 ; Set absolute positioning mode]]></text>
+      <text><![CDATA[M260 A112 B1 S1 ; Select VAC1 through mux]]></text>
+      <text><![CDATA[M260 A109 B48 ; Select CMD register on VAC1 @address 109]]></text>
+      <text><![CDATA[M260 B27 S1 ; Send byte to select 62.5 sleep time, SCO, sleep mode conversion (0001 1 011)]]></text>
+      <text><![CDATA[M260 A112 B2 S1 ; Select VAC2 through mux]]></text>
+      <text><![CDATA[M260 A109 B48 ; Select CMD register on VAC2 @address 109]]></text>
+      <text><![CDATA[M260 B27 S1 ; Send byte to select 62.5 sleep time, SCO, sleep mode conversion (0001 1 011)]]></text>
+   </command>
+   <command type="HOME_COMMAND">
+      <text><![CDATA[{Acceleration:M204 S%.2f ; Initialize acceleration}]]></text>
+      <text><![CDATA[G28 ; Home all axes]]></text>
+   </command>
+   <command type="SET_GLOBAL_OFFSETS_COMMAND">
+      <text><![CDATA[G92 {X:X%.4f} {Y:Y%.4f} {Z:Z%.4f} {A:A%.4f} {B:B%.4f} ; reset coordinates]]></text>
+   </command>
+   <command type="GET_POSITION_COMMAND">
+      <text><![CDATA[M114 ; get position]]></text>
+   </command>
+   <command type="MOVE_TO_COMMAND">
+      <text><![CDATA[{Acceleration:M204 S%.0f }]]></text>
+      <text><![CDATA[G1 {X:X%.4f} {Y:Y%.4f} {Z:Z%.4f} {A:A%.4f} {B:B%.4f} {FeedRate:F%.0f} ; move to target]]></text>
+   </command>
+   <command type="MOVE_TO_COMPLETE_COMMAND">
+      <text><![CDATA[M400 ; Wait for moves to complete before returning]]></text>
+   </command>
+   <command head-mountable-id="ACT181da4839f05fb30" type="ACTUATE_BOOLEAN_COMMAND">
+      <text><![CDATA[{True:M106 P0}{False:M107 P0} ; Actuate pump]]></text>
+      <text><![CDATA[{True:M106 P1}{False:M107 P1} ; Actuate solenoid]]></text>
+   </command>
+   <command head-mountable-id="ACT181da4839f05fb30" type="ACTUATOR_READ_COMMAND">
+      <text><![CDATA[M260 A112 B1 S1 ; Select VAC1 through multiplexer @address 112]]></text>
+      <text><![CDATA[M260 A109 B6 S1 ; Select MSB register on VAC1 @address 109]]></text>
+      <text><![CDATA[M261 A109 B1 S2 ; Request one byte back via decimal]]></text>
+   </command>
+   <command head-mountable-id="ACT181da4839f05fb30" type="ACTUATOR_READ_REGEX">
+      <text><![CDATA[^.*data:(?<Value>.*)]]></text>
+   </command>
+   <command head-mountable-id="ACT181da4842c3199f4" type="ACTUATE_BOOLEAN_COMMAND">
+      <text><![CDATA[{True:M106 P2}{False:M107 P2} ; Actuate pump]]></text>
+      <text><![CDATA[{True:M106 P3}{False:M107 P3} ; Actuate solenoid]]></text>
+   </command>
+   <command head-mountable-id="ACT181da4842c3199f4" type="ACTUATOR_READ_COMMAND">
+      <text><![CDATA[M260 A112 B2 S1 ; Select VAC2 through multiplexer @address 112]]></text>
+      <text><![CDATA[M260 A109 B6 S1 ; Selects MSB register on VAC2 @address 109]]></text>
+      <text><![CDATA[M261 A109 B1 S2 ; Request one byte back via decimal]]></text>
+   </command>
+   <command head-mountable-id="ACT181da4842c3199f4" type="ACTUATOR_READ_REGEX">
+      <text><![CDATA[^.*data:(?<Value>.*)]]></text>
+   </command>
+   <command head-mountable-id="ACT181da457e9fe0a94" type="ACTUATE_BOOLEAN_COMMAND">
+      <text><![CDATA[{True:M150 P255 R255 U255 B255}{False:M150 P0}]]></text>
+   </command>
+   <command head-mountable-id="ACT181da46970eb72b6" type="ACTUATOR_READ_COMMAND">
+      <text><![CDATA[M485 {Value}]]></text>
+   </command>
+   <command head-mountable-id="ACT181da46970eb72b6" type="ACTUATOR_READ_REGEX">
+      <text><![CDATA[rs485-reply: (?<Value>.*)]]></text>
+   </command>
+   <send-on-change-feed-rate send-on-change="false" relative-deviation="0.001" variable="FeedRate"/>
+   <send-on-change-acceleration send-on-change="false" relative-deviation="0.001" variable="Acceleration"/>
+   <send-on-change-jerk send-on-change="false" relative-deviation="0.001" variable="Jerk"/>
+</gcode-driver>
