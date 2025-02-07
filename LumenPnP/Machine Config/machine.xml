@@ -176,7 +176,7 @@
                   <zoom property="Zoom"/>
                </camera>
             </cameras>
-            <park-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+            <park-location units="Millimeters" x="216.5" y="487.0" z="0.0" rotation="0.0"/>
             <soft-limits-enabled>false</soft-limits-enabled>
             <homing-fiducial-location units="Millimeters" x="5.736" y="6.112" z="0.0" rotation="0.0"/>
             <calibration-primary-fiducial-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
