@@ -312,6 +312,12 @@
             <command head-mountable-id="ACT181da46970eb72b6" type="ACTUATOR_READ_REGEX">
                <text><![CDATA[rs485-reply: (?<Value>.*)]]></text>
             </command>
+            <command type="DISABLE_COMMAND">
+               <text><![CDATA[M18 ; disable steppers]]></text>
+            </command>
+            <command type="ENABLE_COMMAND">
+               <text><![CDATA[M17 ; enable steppers]]></text>
+            </command>
             <send-on-change-feed-rate send-on-change="false" relative-deviation="0.001" variable="FeedRate"/>
             <send-on-change-acceleration send-on-change="false" relative-deviation="0.001" variable="Acceleration"/>
             <send-on-change-jerk send-on-change="false" relative-deviation="0.001" variable="Jerk"/>
