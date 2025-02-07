@@ -709,9 +709,11 @@
       <unsafe-Z-roaming-distance value="10.0" units="Millimeters"/>
       <pool-scripting-engines>false</pool-scripting-engines>
       <auto-load-most-recent-job>false</auto-load-most-recent-job>
-      <solutions show-indicator="true" target-milestone="Kinematics">
+      <solutions show-indicator="true" target-milestone="Vision">
          <dismissed-solutions class="java.util.HashSet">
             <string>8ae5b1df5ddc2df09dd4c172e0f2b59df4d14ad6</string>
+            <string>e1de12e3f6c1e02f981ba9de75787a4c5f206b20</string>
+            <string>7d026b6441536a3bf16d231a8f705cef616af4c5</string>
          </dismissed-solutions>
          <solved-solutions class="java.util.HashSet">
             <string>947dd5a3c6e9e7e6b4479fc77c9f30c92e66fa31</string>
