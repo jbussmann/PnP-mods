@@ -149,18 +149,18 @@
                   <focus-provider class="org.openpnp.machine.reference.camera.AutoFocusProvider" averaged-frames="1" focus-speed="0.5" show-diagnostics="true">
                      <focal-resolution value="0.05" units="Millimeters"/>
                   </focus-provider>
-                  <back-light-compensation property="BackLightCompensation" value="0"/>
+                  <back-light-compensation property="BackLightCompensation" value="3"/>
                   <brightness property="Brightness" value="0"/>
                   <contrast property="Contrast" value="30"/>
                   <exposure property="Exposure" value="78" auto="false"/>
                   <focus property="Focus"/>
                   <gain property="Gain"/>
-                  <gamma property="Gamma" value="72"/>
+                  <gamma property="Gamma" value="100"/>
                   <hue property="Hue" value="1"/>
                   <power-line-frequency property="PowerLineFrequency" value="1"/>
                   <saturation property="Saturation" value="64"/>
                   <sharpness property="Sharpness" value="0"/>
-                  <white-balance property="WhiteBalance" value="2800" auto="false"/>
+                  <white-balance property="WhiteBalance" value="4000" auto="false"/>
                   <zoom property="Zoom"/>
                </camera>
             </cameras>
@@ -210,18 +210,18 @@
             <focus-provider class="org.openpnp.machine.reference.camera.AutoFocusProvider" averaged-frames="1" focus-speed="0.5" show-diagnostics="true">
                <focal-resolution value="0.05" units="Millimeters"/>
             </focus-provider>
-            <back-light-compensation property="BackLightCompensation" value="0"/>
+            <back-light-compensation property="BackLightCompensation" value="3"/>
             <brightness property="Brightness" value="0"/>
             <contrast property="Contrast" value="30"/>
-            <exposure property="Exposure" value="1" auto="false"/>
+            <exposure property="Exposure" value="78" auto="false"/>
             <focus property="Focus"/>
             <gain property="Gain"/>
-            <gamma property="Gamma" value="72"/>
+            <gamma property="Gamma" value="100"/>
             <hue property="Hue" value="1"/>
             <power-line-frequency property="PowerLineFrequency" value="1"/>
-            <saturation property="Saturation" value="0"/>
+            <saturation property="Saturation" value="64"/>
             <sharpness property="Sharpness" value="0"/>
-            <white-balance property="WhiteBalance" value="2800" auto="false"/>
+            <white-balance property="WhiteBalance" value="4000" auto="false"/>
             <zoom property="Zoom"/>
          </camera>
       </cameras>
