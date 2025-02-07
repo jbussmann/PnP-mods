@@ -11,7 +11,7 @@
             <safe-zone-low value="0.0" units="Millimeters"/>
             <safe-zone-high value="0.0" units="Millimeters"/>
             <feedrate-per-second value="800.0" units="Millimeters"/>
-            <acceleration-per-second-2 value="6000.0" units="Millimeters"/>
+            <acceleration-per-second-2 value="4000.0" units="Millimeters"/>
             <jerk-per-second-3 value="0.0" units="Millimeters"/>
             <resolution>1.0E-4</resolution>
          </axis>
@@ -21,7 +21,7 @@
             <backlash-offset value="0.0" units="Millimeters"/>
             <sneak-up-offset value="0.0" units="Millimeters"/>
             <soft-limit-low value="0.0" units="Millimeters"/>
-            <soft-limit-high value="490.0" units="Millimeters"/>
+            <soft-limit-high value="487.0" units="Millimeters"/>
             <safe-zone-low value="0.0" units="Millimeters"/>
             <safe-zone-high value="0.0" units="Millimeters"/>
             <feedrate-per-second value="800.0" units="Millimeters"/>
