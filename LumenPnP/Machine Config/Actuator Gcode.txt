@@ -8,6 +8,12 @@ COMMAND_CONFIRM_REGEX
 POSITION_REPORT_REGEX
 ^.*X:(?<X>-?\d+\.\d+)\s*Y:(?<Y>-?\d+\.\d+)\s*Z:(?<Z>-?\d+\.\d+)\s*A:(?<A>-?\d+\.\d+)\s*B:(?<B>-?\d+\.\d+).*
 
+ENABLE_COMMAND
+M17 ; enable steppers
+
+DISABLE_COMMAND
+M18 ; disable steppers
+
 CONNECT_COMMAND
 G21 ; Set millimeters mode
 G90 ; Set absolute positioning mode
