@@ -1,4 +1,4 @@
-Description: Use demo simulation machine and choose nozzle configuration
+Description: use demo simulation machine and choose nozzle configuration
 
 Executed tasks:
 accepted: create nozzles for this head
@@ -9,7 +9,7 @@ manually: create CP40 nozzle tip set (use prefix NT for nozzle tip)
 Milestone Welcome
 =================
 
-Description: Connect to controllers and cameras
+Description: connect to controllers and cameras
 
 Executed tasks:
 manually: remove bottom cam and create new up-looking cam (get rid of some preconfigs)
@@ -41,7 +41,7 @@ dismissed: H1 is missing pump actuator
 Milestone Basics
 ================
 
-Description: Define save z, soft limits, motion control model, feed-rates, accelerations etc.
+Description: define save z, soft limits, motion control model, feed-rates, accelerations etc.
 
 Executed tasks:
 accepted: home machine
@@ -61,12 +61,23 @@ accepted: remove diver maximum feed rate
 Milestone Kinematics
 ====================
 
-setup camera and computer vision
+Description: setup camera and computer vision
+
+Executed tasks:
+manually: set all camera settings to default, except sharpness to 0
+accepted: 2x suspend camera preview during machine tasks
+dismissed: 2x enable auto camera view
+dismisses: 2x calibrate static white balance
+manually: add compatible and loaded nozzle tips
 ----------------
 Milestone Vision
 ================
 
-calibrate precise motion and vision
+Description: calibrate the machine for precise motion and vision
+
+Executed tasks:
+manually: add nozzle tip calibration data
+manually: 
 ---------------------
 Milestone Calibration
 =====================
@@ -81,3 +92,16 @@ advanced features for faster and more automatic machine
 ------------------
 Milestone Advanced
 ==================
+
+Potential bugs:
+- unconventional z axis: undismissable -> fixed
+- secondary fiducual: error at dismiss
+- after bottom cam calib: no cam found
+
+Potential pitfalls:
+- Nozzle offset: no mention of nozzle tip for capturing Z
+
+To do:
+- Finish vacuum setup (dwell times, thresholds etc.)
+- preemptive feeding (actuator coordination, async driver)
+- stock bottom vision vs default machine vision
