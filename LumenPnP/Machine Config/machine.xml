@@ -123,9 +123,12 @@
                <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT181da4842c3199f4" name="VAC2" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV181da1c40d579682" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="true" enabled-actuation="AssumeUnknown" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
                   <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
                </actuator>
+               <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT1825d9b9a44e45f2" name="LED_Top" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV181da1c40d579682" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="true" enabled-actuation="ActuateOn" homed-actuation="LeaveAsIs" disabled-actuation="ActuateOff" index="0">
+                  <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+               </actuator>
             </actuators>
             <cameras>
-               <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" axis-X-id="AXS181da1c40d7ad4eb" axis-Y-id="AXS181da1c40d83f36d" axis-Z-id="AXS181da1c40d860805" axis-rotation-id="AXS181da1c40d876c1d" id="CAM181da282e85c9762" name="Top" looking="Down" auto-visible="false" shown-in-multi-camera-view="true" before-capture-light-on="true" user-action-light-on="true" after-capture-light-off="false" anti-glare-light-off="false" enable-units-per-pixel-3-d="false" auto-view-plane-z="false" max-relative-motion="0.05" min-motion-template-match-score="0.9" min-contrast-range="16.0" settle-method="FixedTime" settle-time-ms="250" settle-timeout-ms="500" settle-threshold="0.0" settle-debounce="0" settle-full-color="false" settle-gaussian-blur="0" settle-gradients="false" settle-mask-circle="0.0" settle-contrast-enhance="0.0" settle-diagnostics="false" fps="5.0" suspend-preview-in-tasks="true" capture-try-count="4" capture-try-timeout-ms="2000" rotation="0.0" flip-x="false" flip-y="false" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" red-balance="1.0" green-balance="1.0" blue-balance="1.0" red-gamma="1.0" green-gamma="1.0" blue-gamma="1.0" deinterlace="false" light-actuator-id="ACT181da457e9fe0a94" allow-machine-actuators="true" focus-sensing-method="None" white-balance-lead-fractile="0.8" white-balance-clip-fractile="0.99" white-balance-gamma-fractile="0.5" unique-id="LumenPnP Top: LumenPnP Top usb-0000:04:00.3-3.2" format-id="0" freeze-properties="false">
+               <camera class="org.openpnp.machine.reference.camera.OpenPnpCaptureCamera" axis-X-id="AXS181da1c40d7ad4eb" axis-Y-id="AXS181da1c40d83f36d" axis-Z-id="AXS181da1c40d860805" axis-rotation-id="AXS181da1c40d876c1d" id="CAM181da282e85c9762" name="Top" looking="Down" auto-visible="false" shown-in-multi-camera-view="true" before-capture-light-on="true" user-action-light-on="true" after-capture-light-off="false" anti-glare-light-off="false" enable-units-per-pixel-3-d="false" auto-view-plane-z="false" max-relative-motion="0.05" min-motion-template-match-score="0.9" min-contrast-range="16.0" settle-method="FixedTime" settle-time-ms="250" settle-timeout-ms="500" settle-threshold="0.0" settle-debounce="0" settle-full-color="false" settle-gaussian-blur="0" settle-gradients="false" settle-mask-circle="0.0" settle-contrast-enhance="0.0" settle-diagnostics="false" fps="5.0" suspend-preview-in-tasks="true" capture-try-count="4" capture-try-timeout-ms="2000" rotation="0.0" flip-x="false" flip-y="false" offset-x="0" offset-y="0" crop-width="0" crop-height="0" scale-width="0" scale-height="0" red-balance="1.0" green-balance="1.0" blue-balance="1.0" red-gamma="1.0" green-gamma="1.0" blue-gamma="1.0" deinterlace="false" light-actuator-id="ACT1825d9b9a44e45f2" allow-machine-actuators="false" focus-sensing-method="None" white-balance-lead-fractile="0.8" white-balance-clip-fractile="0.99" white-balance-gamma-fractile="0.5" unique-id="LumenPnP Top: LumenPnP Top usb-0000:04:00.3-3.2" format-id="0" freeze-properties="false">
                   <units-per-pixel units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
                   <default-z value="0.0" units="Millimeters"/>
                   <vision-provider class="org.openpnp.machine.reference.vision.OpenCvVisionProvider"/>
@@ -238,7 +241,7 @@
          </camera>
       </cameras>
       <actuators>
-         <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT181da457e9fe0a94" name="LED" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV181da1c40d579682" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="true" enabled-actuation="ActuateOn" homed-actuation="LeaveAsIs" disabled-actuation="ActuateOff" index="0">
+         <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT181da457e9fe0a94" name="LED_Bottom" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV181da1c40d579682" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="true" enabled-actuation="ActuateOn" homed-actuation="LeaveAsIs" disabled-actuation="ActuateOff" index="0">
             <head-offsets units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
          </actuator>
          <actuator class="org.openpnp.machine.reference.ReferenceActuator" id="ACT181da46970eb72b6" name="PhotonFeederData" value-type="Boolean" value-type-confirmed="false" default-on-double="0.0" default-on-string="" default-off-double="0.0" default-off-string="" interlock-actuator="false" driver-id="DRV181da1c40d579682" coordinated-before-actuate="true" coordinated-after-actuate="false" coordinated-before-read="true" enabled-actuation="AssumeUnknown" homed-actuation="LeaveAsIs" disabled-actuation="LeaveAsIs" index="0">
@@ -316,7 +319,7 @@
                <text><![CDATA[^.*data:(?<Value>.*)]]></text>
             </command>
             <command head-mountable-id="ACT181da457e9fe0a94" type="ACTUATE_BOOLEAN_COMMAND">
-               <text><![CDATA[{True:M150 P255 R255 U255 B255}{False:M150 P0}]]></text>
+               <text><![CDATA[{True:M150 P255 R255 U255 B255 S0}{False:M150 P0 S0}]]></text>
             </command>
             <command head-mountable-id="ACT181da46970eb72b6" type="ACTUATOR_READ_COMMAND">
                <text><![CDATA[M485 {Value}]]></text>
@@ -329,6 +332,9 @@
             </command>
             <command type="ENABLE_COMMAND">
                <text><![CDATA[M17 ; enable steppers]]></text>
+            </command>
+            <command head-mountable-id="ACT1825d9b9a44e45f2" type="ACTUATE_BOOLEAN_COMMAND">
+               <text><![CDATA[{True:M150 P255 R255 U255 B255 S1}{False:M150 P0 S1}]]></text>
             </command>
             <send-on-change-feed-rate send-on-change="false" relative-deviation="0.001" variable="FeedRate"/>
             <send-on-change-acceleration send-on-change="false" relative-deviation="0.001" variable="Acceleration"/>
