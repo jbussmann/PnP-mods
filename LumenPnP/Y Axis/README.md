@@ -12,7 +12,7 @@ Overlaid are multiple rectangles, marking the usable range of the different tool
 
 Looking at his image, the issue should become rather clear: there is an area approximately 30 mm deep, spanning across the whole width in the back of the machine, where none of the nozzles can reach. This is wasted area of the 3rd staging plate and as this simple modification demonstrates, it is wasted for no reason.
 
-I'm sending out an official bottom smack to everyone at Opulo for this. Not only because it is a bad design choice but because you lie about this in the LumenPnP brochure. It states a max. PCB size of 240 x 400 mm. This is wrong because the max. usable size is more like 210 x 385 mm. And this is no more unintentional, now that I have told you.
+I'm sending out an official bottom smack to everyone at Opulo for this. Not only because it is a sloppy design choice but because you lie about this in the LumenPnP brochure. It states a max. PCB size of 240 x 400 mm. This is wrong because the max. usable size is more like 210 x 385 mm. And since I now told you you cannot cite unawareness anymore.
 
 ## Proposed solution
 
