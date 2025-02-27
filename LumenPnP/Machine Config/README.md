@@ -25,4 +25,27 @@ To privide users with the best possible experience this solution provides a conf
 
 ## Implementation
 
-There will be a video about how to progress through the few steps from the state that the config file provides to picking and placing the first parts.
+There will be a video about how to progress through the few steps from the state that the config file provides to picking and placing the first parts. For those who don't want to wait or prefer text based instructions, here is a preliminary list of the steps that remain to be completed.
+
+While targeting milestone vision:
+- Manually test the vacuum system and setup the thresholds
+- Accept the enable and home machine solution
+- Accept the set primary fiducial solution, use a feature diameter of 92px
+- Accept the enable visual homing solution
+- Accept the use adaptive settling solution for the top camera
+- Accept the nozzle N1 offset for primary fiducial solution
+- Accept the nozzle N2 offset for primary fiducial solution
+- Accept the bottom camera initial calibration, use feature diameter of 12px and disable auto focus
+- Accept the use adaptive settling solution for the bottom camera
+- Accept the milestone vision
+
+While targeting milestone calibration:
+- Dismiss or accept the backlash compensation for x and y axes
+- Manually set the primary fiducial location to where the hole punch is
+- Accept the N1 precise nozzle offset solution
+- Manually readjust primary fiducial location if necessary
+- Accept the N2 precise nozzle offset solution
+- Manually reset the primary fiducial location to homing fiducial
+- Manually enable nozzle tip calibration on all six nozzle tips
+- Accept nozzle tip background calibration for all loaded nozzle tips
+- Acceept the milestone calibration
