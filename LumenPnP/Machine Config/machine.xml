@@ -365,6 +365,92 @@
             <string>Welcome2_0_Dialog_Shown</string>
             <object class="java.lang.Boolean">true</object>
          </entry>
+         <entry>
+            <string>PhotonFeeder.MaxFeederAddress</string>
+            <object class="java.lang.Integer">25</object>
+         </entry>
+         <entry>
+            <string>PhotonFeeder.FeederSlots</string>
+            <object class="org.openpnp.machine.photon.PhotonFeederSlots">
+               <slots>
+                  <slot address="1">
+                     <location units="Millimeters" x="29.2" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="2">
+                     <location units="Millimeters" x="44.8" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="3">
+                     <location units="Millimeters" x="60.4" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="4">
+                     <location units="Millimeters" x="76.0" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="5">
+                     <location units="Millimeters" x="91.6" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="6">
+                     <location units="Millimeters" x="107.2" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="7">
+                     <location units="Millimeters" x="122.8" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="8">
+                     <location units="Millimeters" x="138.4" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="9">
+                     <location units="Millimeters" x="154.0" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="10">
+                     <location units="Millimeters" x="169.6" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="11">
+                     <location units="Millimeters" x="185.2" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="12">
+                     <location units="Millimeters" x="200.8" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="13">
+                     <location units="Millimeters" x="216.4" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="14">
+                     <location units="Millimeters" x="232.0" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="15">
+                     <location units="Millimeters" x="247.6" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="16">
+                     <location units="Millimeters" x="263.2" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="17">
+                     <location units="Millimeters" x="278.8" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="18">
+                     <location units="Millimeters" x="294.4" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="19">
+                     <location units="Millimeters" x="310.0" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="20">
+                     <location units="Millimeters" x="325.6" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="21">
+                     <location units="Millimeters" x="341.2" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="22">
+                     <location units="Millimeters" x="356.8" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="23">
+                     <location units="Millimeters" x="372.4" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="24">
+                     <location units="Millimeters" x="388.0" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+                  <slot address="25">
+                     <location units="Millimeters" x="403.6" y="51.0" z="7.0" rotation="0.0"/>
+                  </slot>
+               </slots>
+            </object>
+         </entry>
       </properties>
       <nozzle-tips>
          <nozzle-tip class="org.openpnp.machine.reference.ReferenceNozzleTip" id="TIP181da3f4f24040ac" name="NT045" pick-dwell-milliseconds="0" place-dwell-milliseconds="0" place-blow-off-level="0.0" vision-calibration="None" vision-calibration-trigger="Manual" vision-match-minimum-score="0.2" vision-calibration-max-passes="3" z-calibration-trigger="Manual" z-calibration-fail-homing="true" template-nozzle-tip="false" template-locked="false" establish-part-on-level="false" establish-part-off-level="false" part-off-probing-milliseconds="0" part-off-dwell-milliseconds="0" is-push-and-drag-allowed="false">
