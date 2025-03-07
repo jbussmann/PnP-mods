@@ -21,22 +21,47 @@ To privide users with the best possible experience this solution provides a conf
 - Add calibration data to the nozzle tips themselves instead of hardcoding it in the pipeline stages.
 - Reset all vision pipelines to default.
 - Change from tool path to mederated acceleration and allow seperate tuning of all axes.
-- 
+
+This allows the calibration procedure to improve considerably:
+- Use of a one click solution to determine homing fiducial location, determine top camera orientation, roation angle and unit per pixle.
+- Use of a one click solution to determine bottom camera location, orientation, ratation angle and unit per pixle.
+- Use of advanced nozzle offset calibration solution to easily determine the nozzle offset as precise as the machine's motion system allows.
+- Use of the built in nozzle tip runout calibration which leverages linked vision stages.
+- Use of adaptive camera settling to minimize settling time.
+- Use of nozzle tip background calibration to quickly and easily configure the camera exposure.
+- Optional use of of the backlash calibration solution which provides a comprehensive reflection of the state of the motion system.
+
+## Limitations
+
+This config is created on and for OpenPnP 2.2 which was built in February 2025. It is also tested to work on newer builds but it is unlikely to work with older builds. This is due to a limitation in the xml parser, which is unable to handle elements in the config file, if they didn't exist in older versions of OpenPnP.
+
+Unfortunately the OpenPnP 2.2 release was before this configuration file was finalized. Therefore, not all bugs that came up during the creation of the config could be fixed in time. At least one remains in the  2.2 release and was only fixed later on:
+
+- The LumenPnP has no secondary fiducial, therefore the associated calibaration in Issues & solutions is to be dismissed. Due to a bug, dismissing this solution through the UI is impossible and was therefore dismissed by manually editing the configuration file. Due to the same bug, users are also unable to reopen this solution, in case they wish to use a custom made secondary fuducial. To reopen this solution either update to a newer build of OpenPnP or manuall remove the line `<string>831b760f63cd9d1b93a457157a4f8c366aa0cf33</string>` from the config file under `dismissed-solutions`.
+- Camera settings getting lost.
 
 ## Implementation
 
 There will be a video about how to progress through the few steps from the state that the config file provides to picking and placing the first parts. For those who don't want to wait or prefer text based instructions, here is a preliminary list of the steps that remain to be completed.
 
 While targeting milestone vision:
-- Manually test the vacuum system and setup the thresholds
-- Accept the enable and home machine solution
-- Accept the set primary fiducial solution, use a feature diameter of 92px
-- Accept the enable visual homing solution
+- Accept the enable and home machine solution  
+Relevant Opulo docs: [Homing Fiducial](https://docs.opulo.io/openpnp/calibration/4-homing-fiducial/)
+- Manually load nozzle tips NT045 and NT24  
+Relevant Opulo docs: [Mounting Nozzle Tips](https://docs.opulo.io/openpnp/calibration/5-mm-per-pixel/#mounting-nozzle-tips)
+- Manually test the vacuum system and setup the thresholds  
+Relevant Opulo docs: [Vacuum Part Detection](https://docs.opulo.io/openpnp/calibration/10-vacuum-sensor/)
+- Accept the set primary fiducial solution, use a feature diameter of 92px  
+Relevant Opulo docs: [Setting Homing Fiducial Location](https://docs.opulo.io/openpnp/calibration/4-homing-fiducial/#setting-homing-fiducial-location) and [Top Camera Calibration](https://docs.opulo.io/openpnp/calibration/5-mm-per-pixel/#top-camera-calibration)
+- Accept the enable visual homing solution  
+Relevant Opulo docs: [Test Fiducial Homing](https://docs.opulo.io/openpnp/calibration/4-homing-fiducial/#test-fiducial-homing)
 - Accept the use adaptive settling solution for the top camera
 - Accept the nozzle N1 offset for primary fiducial solution
-- Accept the nozzle N2 offset for primary fiducial solution
-- Accept the bottom camera initial calibration, use feature diameter of 12px and disable auto focus
-- Accept the use adaptive settling solution for the bottom camera
+- Accept the nozzle N2 offset for primary fiducial solution  
+Relevant Opulo docs: [Nozzle Offset](https://docs.opulo.io/openpnp/calibration/6-nozzle-offset/)
+- Accept the bottom camera initial calibration, use feature diameter of 12px and disable auto focus  
+Relevant Opulo docs: [Bottom Camera Position](https://docs.opulo.io/openpnp/calibration/7-bottom-camera-position/) and [Bottom Camera Calibration](https://docs.opulo.io/openpnp/calibration/5-mm-per-pixel/#bottom-camera-calibration)
+- Accept the use adaptive settling solution for the bottom camera  
 - Accept the milestone vision
 
 While targeting milestone calibration:
