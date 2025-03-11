@@ -28,8 +28,24 @@ There are multiple ways to solve this issue. This solution is limited to only mo
 
 A word of warning to begin with: this modification messes up the coordinate system, because it changes the homing fiducial position. All precise x and y coordinates become invalid, especially those of tool changer positions. Keep this in mind before you proceed.
  
-To implement this modification, first of all you need to print the modified front feet. The next step is to remove the existing front feet. For that, the front feeder rail needs to be removed as well as the y axis idler pulleys together with the idler pulley arms. With that out of the way, the feet themselves can be removed. Due to the changed mounting of the front feeder rail, the angle elements, used to bolt the feeder rail to the lower y gantry rail, need do be removed.
- 
-Now the assembly can begin. Start by bolting one leg to the y gantry, then insert the front feeder rail into it's pocket in the leg, finally add the second leg. Now reattach the angle elements in such a way, that they connect the front feeder rail to the lower y gantry rail. Reattach the idler pulleys and tighten the y axis belts. With that completed, the most difficult part is already done. Now only the y axis striker and the leg extensions need to be transferred from the old to the new legs.
- 
-Now comes the fun part, which actually makes a difference now. Loosen all staging plates on the machine and realign them 75 mm away from the front feeder rail. You can do this like during the initial assembly by using the supplied jig. Now open OpenPnP and adjust the position of the homing fiducial, the bottom camera and every thing else that is bolted to the build/staging plate. Test if everything still works and enjoy the usable machine area that is now almost 10% larger compared to the standard triple build plate setup. Or a whopping 45% compared to the standard triple plate setup, in case you choose to ad a fourth plate.
+To implement this modification:
+- First of all you need to print the modified front feet.
+- Remove the front feeder rail together with the angle-brackets from the machine.
+- Use this rail to test fit all pockets and slots of the new 3D printed parts. Remove potential scrapes and bridging residues.
+- Remove both of the existing front feet from the machine.
+  - Remove the y axis striker.
+  - Loosen both y axis idler pulleys and remove both idler pulley arms.
+  - Now the feet themselves can be removed.
+- Remove the angle-brackets form the front feeder rail. Due to the changed mounting of the rail, they will go somewhere else.
+- Transfer all mounting elements form the old to the new 3D prints. Do the same with the feet extensions.
+- On the left foot, don't forget the threaded insert for the y axis striker.
+- With all that done, assembly can begin. This part is a bit cumbersome if you do a retrofit and didn't fully disassemble the machine.
+  - Start by slotting both feet onto the front feeder rail.
+  - Carfully slot the assembly onto the lower y axis rails.
+  - Insert the top y axis rails into the feet and continuously push everything into place.
+  - With everything firmly in place, tighten all the bolts.
+  - Remount both y axis idler pulley arms and the idler pulleys.
+  - Remount the y axis striker.
+- As a last step mount the angle-brackets, now on top of the front feeder rail.
+
+With all these steps done, the most difficult part is already done and now comes the fun part, which actually makes a difference. Loosen all staging plates on the machine and realign them 75 mm away from the front feeder rail. You can do this like during the initial assembly by using the supplied jig. Now open OpenPnP and adjust the position of the homing fiducial, the bottom camera and every thing else that is bolted to the build/staging plate. Test if everything still works and enjoy the usable machine area that is now almost 10% larger compared to the standard triple build plate setup. Or a whopping 45% compared to the standard triple plate setup, in case you choose to ad a fourth plate.
