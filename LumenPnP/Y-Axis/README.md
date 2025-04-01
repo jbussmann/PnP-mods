@@ -1,14 +1,12 @@
 # Y-Axis Optimisation
 
-
-
 A modification optimising y-axis travel to increase the usable area of the machine in triple staging plate configuration by almost 10%. It involves replacing the front legs with newly printed ones, slightly rearranging the staging plates and updating the configuration of OpenPnP to reflect the changed geometry.
 
 ## Issue
 
 The image below shows the machine in it's default configuration, drawn to scale. It shows the build plate as well as  the staging plate and both rows of LumenPnP Feeders. Additionally it shows in grey the optional 3rd staging plate in the back.
 
-![Machine Table before](https://github.com/user-attachments/assets/33d8fd97-d878-4bbb-bc84-cfb758248189)
+![Machine Table before](https://github.com/user-attachments/assets/1fbd882c-9a27-4277-84b3-134d62497cbe)
 
 Overlaid are multiple rectangles, outlining the usable range of the different tools on the machine head. Green marks the area which can be reached by the camera. The blue rectangle marks the area reachable by both nozzles and the red areas are only accessible by one of the nozzles.
 
@@ -18,7 +16,7 @@ Looking at his image, the issue should become rather clear: there is an area app
 
 The inaccessible area in the back of the machine can easily made useable by moving the staging plates 35 mm closer to the front of the machine. While 30 mm would be enough, the additional 5 mm cover potential variances for example in the assembly process of the machine. To retain all functionalities of the machine and to not break compatibility, the front feeder rail needs to move by the same amount for the feeders not to collide with the build plate. This in turn requires modifications to the front legs, as these define the position of this rail. This is the main content of this modification. The following image illustrates the new situation after the modification.
 
-![Machine Table after](https://github.com/user-attachments/assets/a8398424-2f02-4b7d-996e-adfbfe844c60)
+![Machine Table after](https://github.com/user-attachments/assets/eb8830d3-b8fd-4f46-b313-0ad17cf4e243)
 
 As can be seen, the nozzles (blue and red) can now reach all the way to the rear edge of the third staging plate and the front feeder pick window is still within reach of nozzles and camera. The nozzles can even reach as far as a fourth staging plate in the front, added in grey. After all, the y-axis travel limit of 487 mm exceeds the length of four build plates, which are a total of 480 mm long. It is thus not only possible but also practical (see the picture in the top level README of this repo) to add a fourth staging plate in the front.
 
@@ -30,10 +28,9 @@ There are multiple ways to accommodate the moved front feeder rail and staging p
 
 The core of this modification is a pair of modified front feet. They are remodeled from scratch, according to the original models, which turned out to be unworkable due to their complexity. The new model is stripped of all non-functional features and is thus much lighter in terms of the feature tree. It comes as individual STL-files, for those who just want to print it and as a FreeCAD multi-body part, for those who want to make further modifications. There are also two SVG-files with the outline of a fourth staging plate, in case someone wants to have this too. One is a full staging plate and the other one is split, to accommodate 5 LumenPnP Feeders in the centre. Both feature the necessary cut-outs around the front feet and are intended to be used for cutting or milling. If the intention is to use PCBs, Opulo's [PCB design file](https://github.com/opulo-inc/lumenpnp/blob/main/pnp/pcb/staging-plate/staging-plate.kicad_pcb) is a better starting point.
 
-
 A word of warning before diving in: doing this modification messes with the coordinate system, because it moves the homing fiducial. As a result, all precise x and y coordinates become invalid and need to be checked and potentially updated. This applies to the tool changer positions but also to all feeder positions. Keep this in mind before proceeding and maybe save the following steps for a period of machine downtime.
 
-- First of all, print the modified front feet.
+- First of all, print the modified front feet. They have the same requirements as the original parts, print settings can be found [here](https://docs.opulo.io/byop/mechanical-assembly/1-printing-parts/). 
 - Remove the front feeder rail from the machine, together with the angle-brackets.
 - Use this rail to test fit all pockets and slots of the new 3D printed parts. Remove potential scrapes and bridging residues.
 - Remove both of the original front feet from the machine.
