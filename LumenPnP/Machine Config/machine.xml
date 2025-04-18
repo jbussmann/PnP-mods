@@ -85,9 +85,9 @@
          </axis>
       </axes>
       <heads>
-         <head class="org.openpnp.machine.reference.ReferenceHead" id="H1" name="H1" vacuum-pump-control="None" pump-on-wait-milliseconds="0" visual-homing-method="None" nozzle-solution="DualNegated" nozzle-solutions-multiplier="1">
+         <head class="org.openpnp.machine.reference.ReferenceHead" id="HED612b0679bfdded08" name="H1" vacuum-pump-control="None" pump-on-wait-milliseconds="0" visual-homing-method="None" nozzle-solution="DualNegated" nozzle-solutions-multiplier="1">
             <nozzles>
-               <nozzle class="org.openpnp.machine.reference.ReferenceNozzle" axis-X-id="AXS181da1c40d7ad4eb" axis-Y-id="AXS181da1c40d83f36d" axis-Z-id="AXS181da1c40d887a6c" axis-rotation-id="AXS181da1c40d89041a" id="N1" name="N1" rotation-mode="AbsolutePartAngle" aligning-rotation-mode="true" max-pick-articulation-angle="15.0" max-alignment-articulation-angle="30.0" pick-dwell-milliseconds="500" place-dwell-milliseconds="100" changer-enabled="false" nozzle-tip-changed-on-manual-feed="false" enable-dynamic-safe-z="true" blow-off-closing-valve="true" version="200" limit-rotation="true">
+               <nozzle class="org.openpnp.machine.reference.ReferenceNozzle" axis-X-id="AXS181da1c40d7ad4eb" axis-Y-id="AXS181da1c40d83f36d" axis-Z-id="AXS181da1c40d887a6c" axis-rotation-id="AXS181da1c40d89041a" id="NOZe1a489d5a363e88b" name="N1" rotation-mode="AbsolutePartAngle" aligning-rotation-mode="true" max-pick-articulation-angle="15.0" max-alignment-articulation-angle="30.0" pick-dwell-milliseconds="500" place-dwell-milliseconds="100" changer-enabled="false" nozzle-tip-changed-on-manual-feed="false" enable-dynamic-safe-z="true" blow-off-closing-valve="true" version="200" limit-rotation="true">
                   <compatible-nozzle-tip-ids class="java.util.ArrayList">
                      <string>TIP181da3f6698ffb90</string>
                      <string>TIP181da3f6cf5d436a</string>
