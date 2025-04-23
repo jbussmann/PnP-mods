@@ -1,6 +1,8 @@
 # Passive Strip Feeder
 
-A much improved version of the popular Menlu strip feeder, originally designed by ERIK3DP. It allows the LumenPnP to easily use small parts and thin plastic tape without the headache of parts jumping all over tha place. 
+A much improved version of the popular Menlu strip feeder, originally designed by ERIK3DP. It allows the LumenPnP to easily use small parts and thin plastic tape without the headache of parts jumping all over tha place.
+
+![8mm and 12mm feeder array](https://github.com/user-attachments/assets/6cc6beef-4060-4dd5-93c4-eb143dcf29db)
 
 ## Issue
 
