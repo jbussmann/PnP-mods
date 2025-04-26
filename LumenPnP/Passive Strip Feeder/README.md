@@ -1,12 +1,12 @@
 # Passive Strip Feeder
 
-A much improved version of the popular Menlu strip feeder, originally designed by ERIK3DP. It allows the LumenPnP to easily use small parts and thin plastic tape without the headache of parts jumping all over tha place.
+A much improved version of the popular Menlu strip feeder, originally designed by ERIK3DP. It allows the LumenPnP to easily use small parts and thin plastic tape without the headache of parts jumping all over the place.
 
 ![8mm and 12mm feeder array](https://github.com/user-attachments/assets/6cc6beef-4060-4dd5-93c4-eb143dcf29db)
 
 ## Issue
 
-The strip feeders provided by Opulo to accompany the LumenPnP are of a very simplistic design. This is a compromise and leads to limitations in their application. The main issue of these stock feeders is their inability to fixate thin tape in the vertical direction. Their fixed geometry works adequately with thick tape but because they have no moving parts to compensate for different tape thicknesses, these feeders are especially problematic for parts in thin tapes like 0402 components and plastic tapes. It is almost impossible to use such parts as simply touching the tape can send all the parts flying that are no more protected by the cover film. 
+The strip feeders provided by Opulo to accompany the LumenPnP are of a very simplistic design. This is a compromise and leads to limitations in their application. The main issue of these stock feeders is their inability to fixate components tape in the vertical direction. Their fixed geometry works adequately with thick tape but because they have no moving parts to compensate for changes in tape thickness, they are especially problematic for parts in thin tapes like 0402 components and plastic tapes. This is because it is almost impossible to use such parts as simply touching the tape can send all the parts flying that are no more protected by the cover film. The stock feeders also have limitations when used with extremely thick tape, as this tape can get stuck and buckle due to excess friction, when trying to slide it into the feeder.
 
 ## Proposed Solution
 
