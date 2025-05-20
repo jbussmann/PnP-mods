@@ -92,6 +92,7 @@ advanced features for faster and more automatic machine
 ------------------
 Milestone Advanced
 ==================
+accepted: switch to advanced motion planner
 
 Potential bugs:
 - unconventional z axis: undismissable -> fixed

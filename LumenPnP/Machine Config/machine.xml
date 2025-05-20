@@ -807,7 +807,12 @@
             <board-location-tolerance value="5.0" units="Millimeters"/>
          </tolerances>
       </fiducial-locator>
-      <motion-planner class="org.openpnp.machine.reference.driver.NullMotionPlanner" maximum-plan-history="60.0"/>
+      <motion-planner class="org.openpnp.machine.reference.driver.ReferenceAdvancedMotionPlanner" maximum-plan-history="60.0" allow-continuous-motion="false" allow-uncoordinated="false" diagnostics-enabled="false" interpolation-retiming="true" minimum-speed="0.05" show-approximation="true" to-mid-1-speed="1.0" to-mid-2-speed="1.0" to-end-speed="1.0" start-location-enabled="false" mid-1-location-enabled="false" mid-2-location-enabled="false" end-location-enabled="false" to-mid-1-safe-z="true" to-mid-2-safe-z="true" to-end-safe-z="true">
+         <start-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+         <mid-location-1 units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+         <mid-location-2 units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+         <end-location units="Millimeters" x="0.0" y="0.0" z="0.0" rotation="0.0"/>
+      </motion-planner>
       <home-after-enabled>false</home-after-enabled>
       <park-after-homed>false</park-after-homed>
       <unsafe-Z-roaming-distance value="10.0" units="Millimeters"/>
